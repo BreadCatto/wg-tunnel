@@ -175,4 +175,4 @@ netfilter-persistent save
 ---
 
 
-his README is **ready for GitHub**, all code blocks are copyable using the GitHub **“copy” button**, and users can follow the **one-line installer** without cloning manually.
+
