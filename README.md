@@ -28,7 +28,7 @@ It supports:
 
 ## Requirements
 
-- **OS:** Ubuntu 24.04 (both Home and VPS)  
+- **OS:** Debian 10+/Ubuntu 18.04+ (Tested) or any other debian based OS (Untested) (both Home and VPS)  
 - **Root / sudo access**  
 - **Public IP** for VPS  
 - Ports you want to forward (single or ranges)  
