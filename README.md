@@ -1,13 +1,12 @@
 # WG Tunnel: Home Server ↔ VPS Tunnel
 
-This repository provides scripts to make your **home server accessible via a VPS** using **WireGuard VPN**, forwarding **all outgoing traffic** and specific **incoming ports**.
+This repository provides scripts to make your **home server accessible via a VPS** using **WireGuard VPN**, forwarding specific **incoming ports**.
 
 It supports:
 
 - TCP + UDP port forwarding  
 - SSH redirection (VPS SSH → 23, Home SSH via VPS → 22)  
 - Custom port ranges input  
-- Full outgoing traffic tunneling  
 - IPv6 ready  
 
 ---
@@ -48,9 +47,8 @@ sudo apt install -y wireguard iptables iptables-persistent curl net-tools qrenco
 
 1. **Universal Installer:** Run the one-line GitHub command and select whether you are on **VPS** or **Home server**.  
 2. **Phase 1:** Installs packages, generates WireGuard keys, and shows keys/IPs.  
-3. **Phase 2:** Enter required info (peer keys, VPS IP, ports to forward). Scripts configure WireGuard, NAT, port forwarding, and SSH ports.  
-4. **Routing:** Home server outgoing traffic exits via VPS.  
-5. **Access:** SSH and other services accessible via VPS IP.  
+3. **Phase 2:** Enter required info (peer keys, VPS IP, ports to forward). Scripts configure WireGuard, port forwarding, and SSH ports.  
+4. **Access:** SSH and other services accessible via VPS IP.  
 
 ---
 
@@ -108,8 +106,7 @@ ssh -p 22 user@VPS_IP
 
 ### Other Services
 
-- Connect using **VPS IP + forwarded port** (Minecraft, web, game servers)  
-- Outgoing traffic from Home goes through VPS
+- Connect using **VPS IP + forwarded port** (Minecraft, web, game servers)
 
 ### WireGuard Status
 

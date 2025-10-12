@@ -36,12 +36,11 @@ cat > /etc/wireguard/wg0.conf <<EOF
 [Interface]
 PrivateKey = $HOME_PRIV
 Address = $WG_IP/24
-DNS = 1.1.1.1
 
 [Peer]
 PublicKey = $VPS_PUB
 Endpoint = $VPS_IP:51820
-AllowedIPs = 0.0.0.0/0, ::/0
+AllowedIPs = 10.8.0.0/24
 PersistentKeepalive = 25
 EOF
 
