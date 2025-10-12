@@ -62,13 +62,8 @@ echo "net.ipv6.conf.all.forwarding=1" | sudo tee -a /etc/sysctl.conf
 iptables -F
 iptables -t nat -F
 
-# Detect default interface
-DEFAULT_IF=$(ip route show default | awk '/default/ {print $5; exit}')
-
-# NAT outgoing traffic from home through VPS
-iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o $DEFAULT_IF -j MASQUERADE
-iptables -A FORWARD -i wg0 -j ACCEPT
-iptables -A FORWARD -o wg0 -j ACCEPT
+# Allow forwarding for incoming traffic only
+iptables -A FORWARD -i wg0 -o wg0 -j ACCEPT
 
 # Forward entered ports/ranges TCP+UDP to home
 for P in $PORTS; do
