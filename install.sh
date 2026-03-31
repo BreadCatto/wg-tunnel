@@ -15,7 +15,7 @@ if [[ -d "$TMP_DIR" ]]; then
     rm -rf "$TMP_DIR"
 fi
 
-git clone https://github.com/BreadCatto/wg-tunnel.git "$TMP_DIR"
+git clone -b dev https://github.com/BreadCatto/wg-tunnel.git "$TMP_DIR"
 
 # Step 3: Run the universal installer
 cd "$TMP_DIR"

@@ -57,7 +57,7 @@ sudo apt install -y wireguard iptables iptables-persistent curl net-tools qrenco
 Run the following command to download the installer and run it directly:
 
 ```bash
-bash <(curl -sSL https://raw.githubusercontent.com/BreadCatto/wg-tunnel/main/install.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/BreadCatto/wg-tunnel/dev/install.sh)
 ```
 
 - Select **1) VPS** or **2) Home Server** when prompted.  
